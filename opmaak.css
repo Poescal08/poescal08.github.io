@@ -1,0 +1,91 @@
+/* Algemene opmaak voor de hele pagina /
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/ Opmaak voor de headersectie /
+#header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/ Opmaak voor de bovenste navigatiebalk /
+#top-nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#top-nav li {
+  display: inline;
+  margin: 0 10px;
+}
+
+#top-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#top-nav a:hover {
+  text-decoration: underline;
+}
+
+/ Stijl voor de inhoudssecties /
+#content > div {
+  display: none;
+}
+
+/ Stijl voor de standaardsectie die als eerste wordt weergegeven (Home) /
+#home {
+  display: block;
+}
+
+/ Stijl voor de zichtbare inhoud /
+#content > div:target {
+  display: block;
+}
+
+/ Opmaak voor de inhoudselementen */
+#content h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+#content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+teamdbm — 09-11-2023 09:44
+djwdiwhoidhqodhqwiodhqowidhqwiohdoqwhdoiwh
+function loadContent(section) {
+    var contentDiv = document.getElementById('content');
+
+    if (section === 'home') {
+      contentDiv.innerHTML = 
+        <div id="home">
+          <h1>Welkom op de Homepagina</h1>
+          <p>Dit is de inhoud van de homepagina.Voeg hier je eigen tekst toe.</p>
+        </div>
+      ;
+    } else if (section === 'binairstelsel') {
+      contentDiv.innerHTML = 
+        <div id="binairstelsel">
+          <h1>Binairstelsel</h1>
+          <p>Dit is de inhoud van de sectie over het binairstelsel. Voeg hier je eigen tekst toe.</p>
+        </div>
+      ;
+    } else if (section === 'kleurmodellen') {
+      contentDiv.innerHTML = 
+        <div id="kleurmodellen">
+          <h1>Kleurmodellen</h1>
+          <p>Dit is de inhoud van de sectie over kleurmodellen. Voeg hier je eigen tekst toe.</p>
+        </div>
+      ;
+    }
+  }
